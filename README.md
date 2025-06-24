@@ -17,37 +17,9 @@
 - **CPU**: AMD Ryzen 5 7500F (6核12线程)
 - **推荐内存**: 16GB DDR5 或更高
 
-## 项目结构
-```mermaid
-graph TD
-    A[drl-mec-optimization] 
-    --> B[/saved_models/]
-    --> A
-    A --> C[environment.py]
-    A --> D[networks.py]
-    A --> E[agent.py]
-    A --> F[utils.py]
-    A --> G[main.py]
-    A --> H[evaluation.py]
-    A --> I[requirements.txt]
-    
-    C:::file --> C1[EdgeEnv类]
-    C --> C2[step()方法]
-    C --> C3[reward_function()]
-    
-    D:::file --> D1[HybridActor()]
-    D --> D2[Critic()]
-    
-    E:::file --> E1[collect_rollouts()]
-    E --> E2[ppo_update()]
-    
-    F:::file --> F1[ReplayBuffer()]
-    F --> F2[perf_monitor()]
-    
-    classDef folder fill:#d4e2ff,stroke:#333,stroke-width:1px;
-    classDef file fill:#e3f6ff,stroke:#333,stroke-width:1px;
-
 MIT License
 Copyright (c) 2023 河海大学计算机与软件学院
 
-允许商用/修改/私有化 需保留版权声明 禁止恶意使用
+允许商用/修改/私有化
+需保留完整版权声明
+禁止恶意使用与反向工程
