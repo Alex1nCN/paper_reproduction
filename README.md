@@ -18,24 +18,34 @@
 - **推荐内存**: 16GB DDR5 或更高
 
 ## 项目结构
-drl-mec-optimization/
-├── 📂 saved_models/         # 训练好的模型
-├── 📜 environment.py        # MEC环境建模
-│   ├── class EdgeEnv        # 边缘计算环境
-│   ├── step()               # 状态转换
-│   └── reward_function()    # 多目标奖励
-├── 📜 networks.py           # 神经网络
-│   ├── HybridActor()        # 混合动作策略网络
-│   └── Critic()             # 价值评估网络
-├── 📜 agent.py              # PPO智能体
-│   ├── collect_rollouts()   # 数据收集
-│   └── ppo_update()         # 策略优化核心
-├── 📜 utils.py              # 支持工具
-│   ├── ReplayBuffer()       # 经验回放池
-│   └── perf_monitor()       # 资源监控
-├── 📜 main.py               # 训练主循环
-├── 📜 evaluation.py         # 性能评估
-└── 📜 requirements.txt      # 依赖库
+```mermaid
+graph TD
+    A[drl-mec-optimization] 
+    --> B[/saved_models/]
+    --> A
+    A --> C[environment.py]
+    A --> D[networks.py]
+    A --> E[agent.py]
+    A --> F[utils.py]
+    A --> G[main.py]
+    A --> H[evaluation.py]
+    A --> I[requirements.txt]
+    
+    C:::file --> C1[EdgeEnv类]
+    C --> C2[step()方法]
+    C --> C3[reward_function()]
+    
+    D:::file --> D1[HybridActor()]
+    D --> D2[Critic()]
+    
+    E:::file --> E1[collect_rollouts()]
+    E --> E2[ppo_update()]
+    
+    F:::file --> F1[ReplayBuffer()]
+    F --> F2[perf_monitor()]
+    
+    classDef folder fill:#d4e2ff,stroke:#333,stroke-width:1px;
+    classDef file fill:#e3f6ff,stroke:#333,stroke-width:1px;
 
 MIT License
 Copyright (c) 2023 河海大学计算机与软件学院
