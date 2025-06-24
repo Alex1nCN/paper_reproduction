@@ -13,9 +13,9 @@
 3. **资源约束优化**：满足能量、功率和时延约束条件
 
 ## ⚡ 硬件说明
-- **GPU**: NVIDIA GeForce RTX 4060 Ti
-- **CPU**: AMD Ryzen 5 7500F
-- **内存**: 16GB DDR5
+- **GPU**: NVIDIA GeForce RTX 4060 Ti (已启用CUDA加速)
+- **CPU**: AMD Ryzen 5 7500F (6核12线程)
+- **推荐内存**: 16GB DDR5 或更高
 
 MIT License
 Copyright (c) 2023 河海大学计算机与软件学院
