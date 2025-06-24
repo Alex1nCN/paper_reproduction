@@ -16,3 +16,28 @@
 - **GPU**: NVIDIA GeForce RTX 4060 Ti (已启用CUDA加速)
 - **CPU**: AMD Ryzen 5 7500F (6核12线程)
 - **推荐内存**: 16GB DDR5 或更高
+
+## 项目结构
+drl-mec-optimization/
+├── 📂 saved_models/         # 训练好的模型
+├── 📜 environment.py        # MEC环境建模
+│   ├── class EdgeEnv        # 边缘计算环境
+│   ├── step()               # 状态转换
+│   └── reward_function()    # 多目标奖励
+├── 📜 networks.py           # 神经网络
+│   ├── HybridActor()        # 混合动作策略网络
+│   └── Critic()             # 价值评估网络
+├── 📜 agent.py              # PPO智能体
+│   ├── collect_rollouts()   # 数据收集
+│   └── ppo_update()         # 策略优化核心
+├── 📜 utils.py              # 支持工具
+│   ├── ReplayBuffer()       # 经验回放池
+│   └── perf_monitor()       # 资源监控
+├── 📜 main.py               # 训练主循环
+├── 📜 evaluation.py         # 性能评估
+└── 📜 requirements.txt      # 依赖库
+
+MIT License
+Copyright (c) 2023 河海大学计算机与软件学院
+
+允许商用/修改/私有化 需保留版权声明 禁止恶意使用
