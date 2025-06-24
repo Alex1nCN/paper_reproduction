@@ -1,0 +1,37 @@
+Experiment Results:
+==================================================
+PPO-Hybrid最终性能:
+  mean_reward: 270.0102
+  std_reward: 149.9190
+  total_reward: 135005.1135
+  mean_energy_consumption: 42.4894
+  mean_charging_energy: 546.3448
+  energy_efficiency: 503.8554
+  mean_social_strength: 0.3617
+  convergence_step: 500.0000
+  constraint_violation_rate: 0.0000
+
+算法比较结果:
+  PPO-Hybrid: 420.0943
+  A3C: 255.9021
+  A2C: 304.2328
+
+鲁棒性分析结果:
+  device_count:
+    3: 292.5398
+    5: 134.3920
+    7: 278.2928
+    10: 278.0639
+  social_weight:
+    0.1: 253.2508
+    0.3: 120.5755
+    0.5: 148.3878
+    0.7: 143.3382
+    0.9: 44.6909
+  energy_constraint:
+    500: 156.2992
+    750: 189.6240
+    1000: 125.1240
+    1250: 259.5747
+    1500: 227.0736
+============================================================ 
