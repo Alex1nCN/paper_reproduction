@@ -6,7 +6,7 @@ import math
 class MECEnvironment:
     """
     Multi-Access Edge Computing Environment
-    实现论文中的环境建模，包括状态空间、动作空间和奖励函数
+    论文中的环境建模，包括状态空间、动作空间和奖励函数
     """
     
     def __init__(self, 
